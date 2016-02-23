@@ -228,14 +228,14 @@ const AddForm = React.createClass({
                 </div>
                 <div className="row">
                     <label className={this.getClassName('title')}>
-                        <span>Тема обращения</span>
+                        <span>Номер кабинета (желательно дополнительно указать номер телефона)</span>
                         <input onChange={() => onFieldChange('title')}
                                onKeyUp={() => onFieldChange('title')}
                                ref="title"
                                type="text"
                                value={this.state.form.title}
                                name="title"/>
-                        <span className="error-text">Необходимо указать тему</span>
+                        <span className="error-text">Необходимо указать номер кабинета</span>
                     </label>
                 </div>
                 <div className="row">

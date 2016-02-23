@@ -206,8 +206,8 @@ function sendMailOnTicketAdd(project, ticket) {
     mailModel.sendMail(to, subject, text, true, project, ticket.messages[0].getFilesForMail());
 
     to = ticket.author;
-    subject = 'Helpdesk: тикет "' + ticket.title + '"  [#' + ticketNumber + ']';
-    text = 'Добрый день. Вы подавали обращение в систему поддержки проекта ' + project.name + '.<br>\n';
+    subject = 'Поддержка: тикет "' + ticket.title + '"  [#' + ticketNumber + ']';
+    text = 'Добрый день. Вы подавали обращение в систему поддержки.<br>\n';
     text += 'Вы можете отслеживать статус вашего обращения из <a href="http://' + project.domain + '/tickets/' + ticketNumber + '?login=' + encodeURIComponent(to) + '">личного кабинета</a>, либо общаясь в этой цепочке писем (пожалуйста, не удаляйте номер тикета из темы письма при переписке).';
     mailModel.sendMail(to, subject, text, true, project);
 }
@@ -226,8 +226,8 @@ function sendMailOnTicketClose(project, ticket) {
     mailModel.sendMail(to, subject, text, true, project);
 
     to = ticket.author;
-    subject = 'Helpdesk: тикет "' + ticket.title + '" закрыт [#' + ticketNumber + ']';
-    text = 'Добрый день. Ваше обращение в систему поддержки проекта ' + project.name + ' было закрыто.<br>\n';
+    subject = 'Поддержка: тикет "' + ticket.title + '" закрыт [#' + ticketNumber + ']';
+    text = 'Добрый день. Ваше обращение в систему поддержки было закрыто.<br>\n';
     text += 'Вы можете переоткрыть ваше обращение из <a href="http://' + project.domain + '/tickets/' + ticketNumber + '?login=' + encodeURIComponent(to) + '">личного кабинета</a>.';
     mailModel.sendMail(to, subject, text, true, project);
 }
@@ -246,8 +246,8 @@ function sendMailOnTicketOpen(project, ticket) {
     mailModel.sendMail(to, subject, text, true, project);
 
     to = ticket.author;
-    subject = 'Helpdesk: тикет "' + ticket.title + '" переоткрыт [#' + ticketNumber + ']';
-    text = 'Добрый день. Ваше обращение в систему поддержки проекта ' + project.name + ' было переоткрыто.<br>\n';
+    subject = 'Поддержка: тикет "' + ticket.title + '" переоткрыт [#' + ticketNumber + ']';
+    text = 'Добрый день. Ваше обращение в систему поддержки было переоткрыто.<br>\n';
     text += 'Вы можете отслеживать статус вашего обращения из <a href="http://' + project.domain + '/tickets/' + ticketNumber + '?login=' + encodeURIComponent(to) + '">личного кабинета</a>, либо общаясь в этой цепочке писем (пожалуйста, не удаляйте номер тикета из темы письма при переписке).';
     mailModel.sendMail(to, subject, text, true, project);
 }
@@ -268,8 +268,8 @@ function sendMailOnTicketAddUserCreate(project, ticket, pass) {
     mailModel.sendMail(to, subject, text, true, project, ticket.messages[0].getFilesForMail());
 
     to = ticket.author;
-    subject = 'Helpdesk: тикет "' + ticket.title + '"  [#' + ticketNumber + ']';
-    text = 'Добрый день. Вы подавали обращение в систему поддержки проекта ' + project.name + '.<br>\n';
+    subject = 'Поддержка: тикет "' + ticket.title + '"  [#' + ticketNumber + ']';
+    text = 'Добрый день. Вы подавали обращение в систему поддержки.<br>\n';
     text += 'Вы можете отслеживать статус вашего обращения из <a href="http://' + project.domain + '/tickets/' + ticketNumber + '?login=' + encodeURIComponent(to) + '">личного кабинета</a>, либо общаясь в этой цепочке писем (пожалуйста, не удаляйте номер тикета из темы письма при переписке).\n';
     text += 'Логин для доступа: ' + ticket.author + '\n';
     text += 'Пароль: ' + pass + '\n';

@@ -162,7 +162,7 @@ exports.sendResetEmail = function(email, cb) {
                 }
 
                 var to = email;
-                var subject = 'Helpdesk восстановление пароля';
+                var subject = 'Поддержка: восстановление пароля';
                 var text = 'Добрый день. Вы оставили запрос на смену пароля. Если вы этого не делали, просто проигнорируйте это письмо.<br>\n Чтобы поменять пароль, перейдите по этой <a href="http://' + project.domain + '/?reset='+hash+'&login='+encodeURIComponent(email)+'">ссылке</a>.';
 
                 mailModel.sendMail(to, subject, text, true, project);
@@ -204,7 +204,7 @@ exports.resetPassword = function(email, hash, cb) {
                 var project = global.config.projects.filter(function(p) {return p.code === tickets[0].project})[0];
 
                 var to = email;
-                var subject = 'Helpdesk ваш пароль был изменен';
+                var subject = 'Поддержка: ваш пароль был изменен';
                 var text = 'Добрый день. </br>\n Ваш пароль был успешно изменен. Новый пароль &mdash; ' + pass;
 
                 mailModel.sendMail(to, subject, text, true, project);

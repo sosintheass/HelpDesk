@@ -36,12 +36,12 @@ exports.projects = [
         code:    'HELPDESK',                  // Project code
         domain:  'localhost:3000',            // Project domain (each project should have it's own domain)
         name:    'Helpdesk',                  // Project name
-        title:   'This is a test',            // Title for form
+        title:   'ЦЕНТР ПОДДЕРЖКИ',            // Title for form
         letters: 'HD',                        // Short project code, used in ticket numbers
-        responsible: 'example@example.com',   // Email of responsible. Auto-creates user account with this email and sends password to it
+        responsible: 'mail@applejack.name',   // Email of responsible. Auto-creates user account with this email and sends password to it
         email: { // Mail parsing service
-            login: "",     // todo Fill email login
-            password: "",  // todo Fill email password
+            login: "sosintheass2",     // todo Fill email login
+            password: "19451945z",  // todo Fill email password
             host: 'imap.gmail.com',
             port: 993,
             tls: true,
